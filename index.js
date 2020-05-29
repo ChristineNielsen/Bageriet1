@@ -21,7 +21,7 @@ app.get("/", async (req, res) => {
         return res.render("pages/index", {
            produkter: apiResponse
           });
-      
+            
 });
 
 app.get("/kategorier", async (req, res) => {
@@ -98,3 +98,13 @@ app.listen(3000, () => {
     console.log("Express server kører...");
 });
   
+
+function search(){
+const requestToApi =  fetch('https://api.mediehuset.net/bakeonline/products');
+
+// Konverterer fetch resultat til json format og assigner det til konstanten apiResponse
+const apiResponse =  requestToApi.json();  
+console.log(apiResponse)
+} 
+
+search()
