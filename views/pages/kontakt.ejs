@@ -1,0 +1,47 @@
+<% include ../partials/header %>    
+
+<link rel="stylesheet" href="/assets/css/kontakt.css">
+
+<main id="kontakt">
+
+<div class="grid-container">
+    <div class="kontakt1">
+        <h2>Kontakt os</h2> <br>
+           <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec nunc lorem. Nulla vel neque non lectus dictum condimentum. Pellentesque blandit elit ut odio congue dapibus. Integer eget ipsum ullamcorper risus gravida dictum nec et magna. In magna nisl, pharetra eu volutpat quis, bibendum non ex.</h5>
+    </div>
+    <div class="kontakt2">
+
+        <form method="POST">
+            <div>
+                <label for="firstname"></label>
+                <input type="text" name="firstname" id="firstname" placeholder="Dit navn..">
+            </div>
+            <div>
+                <label for="email"></label>
+                <input type="email" name="email" id="email" placeholder="Din e-mail..">
+            </div>
+    
+            <div>
+                 <label for="comment"></label>
+                 <textarea name="comment" id="comment" placeholder="Din besked.."></textarea>
+            </div>
+        
+            <div>
+                <button type="button" id="send" class="btn btn-success">Send</button>
+            </div>
+        </form>
+    </div>
+    <div class="kontakt3">
+        <h3>
+        addresse: <span class="light">Øster Uttrupvej 1 9200 Aalborg</span> <br>
+        telefon: <span class="light">+45 25 26 95 40</span></h3>
+
+        <img src="/images/kort.JPG" alt="">
+    </div>
+</div>
+
+</main>
+
+<script src="/assets/js/kontakt.js"></script>
+
+<% include ../partials/footer %>

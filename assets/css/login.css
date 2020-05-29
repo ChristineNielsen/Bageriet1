@@ -1,0 +1,63 @@
+label {
+  display: block;
+  margin: 2vw auto 1vw auto;
+  text-align: center;
+}
+
+input {
+  width: 60%;
+  padding: 12px 10px;
+  font-family: open-sans;
+  margin: 0 auto;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  width: calc(30% - 10 *((100vw - 320px) / 680));
+  padding: calc(10px + 3 *((100vw - 320px) / 680));
+  display: block;
+  margin: 2vw auto;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.link{
+  text-decoration: none;
+}
+
+/*RIDIG GRID START*/
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 0 auto;
+  max-width: 90%;
+  grid-gap: 5px;
+  padding: 1vw;
+}
+      
+    @supports (display: grid){
+      .grid-container > * {
+        width: auto;
+        margin: 2px;
+      }
+    }
+  /*RIDIG GRID END*/
+
+  
+.login1{
+  grid-column: 4 / 10;
+  grid-row: 1;
+  -webkit-box-shadow: -1px 0px 17px 0px rgba(0,0,0,0.42);
+  -moz-box-shadow: -1px 0px 17px 0px rgba(0,0,0,0.42);
+  box-shadow: -1px 0px 17px 0px rgba(0,0,0,0.42);
+}
+
+
+@media only screen and (max-width : 620px) {
+  .login1{
+    grid-column: 1 / 13;
+  }
+}

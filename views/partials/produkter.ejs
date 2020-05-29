@@ -1,0 +1,8 @@
+<div class="fluid-grid">
+    <% produkter.products.products.forEach(function(item) {
+    %> <a class="link" href="/produkt-side/<%= item.product_id %>"><div class="card"> <img src="<%= item.image.fullpath %>" alt="">
+    <h3><%= item.title %></h3>
+    <p class="summ"> <%= item.teaser %></p>
+    <button>SE MERE</button>
+    </div> </a>
+    <% }); %>

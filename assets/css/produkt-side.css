@@ -1,0 +1,98 @@
+#produkt-side{
+    background-color: #eee;
+}
+
+/*BLOCKS START*/
+.produkt-side1{
+    grid-column: 1 / 13;
+    grid-row: 1;
+    background-color: white;
+    padding: 0.7vw;
+    margin: 2vw 0;
+}
+
+.produkt-side1 a{
+    text-decoration: none;
+}
+
+.produkt-side2{
+    grid-column: 3 / 10;
+    grid-row: 2;
+}
+
+.produkt-side2 img{
+    width: calc(180px + 120*((100vw - 320px) / 680));
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2vw;
+    height: calc(130px + 50*((100vw - 320px) / 680));
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.produkt-side3{
+    grid-column: 11 / 13;
+    grid-row: 2;
+}
+
+.produkt-side3 button{
+    color: black;
+    border: 1px solid;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 15px;
+    padding: 1vw;
+    margin-top: 1vw;
+}
+
+.produkt-side4{
+    grid-column: 1 / 9;
+    grid-row: 3;
+}
+
+.produkt-side4 h2, .produkt-side4 h5 {
+    text-align: left;
+    margin: 0;
+}
+
+.produkt-side5{
+    grid-column: 10 / 13;
+    grid-row: 3;
+    text-align: center;
+}
+
+.produkt-side5 h3{
+    text-align: left;
+    margin-bottom: 2vw;
+}
+/*BLOCKS END*/
+
+
+.ingredienser{
+width: 70%;
+margin: 0.5vw;
+padding: 1vw;
+background-color: white;
+}
+
+.grey{
+  color: grey;
+}
+
+
+@media only screen and (max-width : 620px) {
+
+.produkt-side4{
+    grid-column: 1 / 13;
+    grid-row: 3;
+    }
+
+.produkt-side5{
+    grid-column: 4 / 13;
+    grid-row: 4;
+    margin-bottom: 4vw;
+    }
+
+}

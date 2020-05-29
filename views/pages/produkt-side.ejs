@@ -1,0 +1,33 @@
+<% include ../partials/header %>    
+    
+<link rel="stylesheet" href="/assets/css/produkt-side.css">
+
+<main id="produkt-side">
+
+<div class="grid-container">
+    <div class="produkt-side1">
+      <a href="/kategorier"> <span class="grey">Produkter ></span></a> <%= produkt.title %></div>
+    <div class="produkt-side2"> <img src="<%= produkt.image.fullpath %>" alt=""></div>
+    <div class="produkt-side3">
+        <button>LIKE! ❤</button>
+    </div>
+    <div class="produkt-side4">
+        <h2><%= produkt.title %></h2> <br>
+        <h5><%= produkt.description %></h5>
+    </div>
+    <div class="produkt-side5">
+        <h3>Ingredienser</h3>
+        <% ingredienser.forEach(function(item) {
+            %> 
+            <p class="ingredienser"> <%= item.amount %> <%= item.unit_abbr %> <%= item.ingredient_title %> </p>
+            <% }); %>
+
+    </div>
+</div>
+
+
+
+</main>
+
+
+<% include ../partials/footer %>

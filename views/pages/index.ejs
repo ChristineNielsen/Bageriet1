@@ -1,0 +1,95 @@
+<!-- views/pages/index.ejs -->
+<% include ../partials/header %> 
+
+<link rel="stylesheet" href="/assets/css/index.css"/>
+
+<main>
+
+<div class="grid-container-full">
+   <div class="index0">
+          
+       <div class="mySlides fade">
+          <img src="/images/slide1.jpg" class="slideshow-img">
+       </div>
+                
+       <div class="mySlides fade">
+          <img src="/images/slide2.jpg" class="slideshow-img">
+       </div>
+                
+       <div class="mySlides fade">
+          <img src="/images/slide3.jpg" class="slideshow-img">
+       </div>
+                
+       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+       <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+       <div class="dots" style="text-align:center">
+         <span class="dot" onclick="currentSlide(1)"></span> 
+         <span class="dot" onclick="currentSlide(2)"></span> 
+         <span class="dot" onclick="currentSlide(3)"></span> 
+       </div>
+          
+       <h1>Vi elsker at lave brød</h1>
+   </div>
+</div>
+
+<div class="grid-container">
+    <div class="index1">
+           <h2>Vi skaber lækkert! brød</h2> <br>
+           <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec nunc lorem. Nulla vel neque non lectus dictum condimentum. Pellentesque blandit elit ut odio congue dapibus. Integer eget ipsum ullamcorper risus gravida dictum nec et magna. In magna nisl, pharetra eu volutpat quis, bibendum non ex.</h5>
+    </div>
+    <div class="index2">
+           <img src="/images/article.jpg" alt="">
+           <h3>KREATIVITET DYRKES</h3>
+           <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec nunc lorem. Nulla vel neque non lectus dictum condimentum. Pellentesque blandit elit ut odio congue dapibus.</h5>
+    </div>
+    <div class="index3">
+           <img src="/images/article2.jpg" alt="">
+           <h3>VI ELSKER BRØD</h3>
+           <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec nunc lorem. Nulla vel neque non lectus dictum condimentum. Pellentesque blandit elit ut odio congue dapibus.</h5>
+    </div>
+    <div class="index4">
+           <img src="/images/article3.jpg" alt="">
+           <h3>SANS FOR DETALJER</h3>
+           <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec nunc lorem. Nulla vel neque non lectus dictum condimentum. Pellentesque blandit elit ut odio congue dapibus.</h5>
+    </div>
+</div>
+
+<div class="grid-container-full">
+    <div class="index5">
+           <img src="/images/newsletterbg1.jpg" alt="">
+       <div class="nyhedsbrev">
+           <h2>Tilmeld dig vores hyhedsbrev</h2>
+           <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec nunc lorem.</h5>
+           <form method="POST">
+              <label for="email"></label>
+              <input type="email" name="email" id="email" placeholder="Indtast din e-mail.."> 
+              <button type="button" id="send" class="btn btn-success">Tilmeld</button> 
+            </form>         
+       </div>
+    </div>
+</div>
+
+<div class="grid-container">
+    <div class="index6">
+       <h2>Nyeste bagværk</h2> <br>
+       <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec nunc lorem. Nulla vel neque non lectus dictum condimentum. Pellentesque blandit elit ut odio congue dapibus. Integer eget ipsum ullamcorper risus gravida dictum nec et magna. In magna nisl, pharetra eu volutpat quis, bibendum non ex.</h5>
+    </div>
+</div>
+
+<div class="fluid-grid">
+       <% produkter.products.slice(0, 8).forEach(function(item) {
+       %> <a class="link" href="/produkt-side/<%= item.id %>"><div class="card"> <img src="<%= item.image.fullpath %>" alt="">
+       <h3><%= item.title %></h3>
+       <p class="summ"> <%= item.teaser %></p>
+       <button>SE MERE</button>
+       </div> </a>
+       <% }); %>
+
+</div>
+
+</main>
+
+<script src="/assets/js/index.js"></script>
+        
+<% include ../partials/footer %>

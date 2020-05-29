@@ -1,0 +1,28 @@
+<!-- views/pages/sange.ejs -->
+<% include ../partials/header %>  
+
+<link rel="stylesheet" href="/assets/css/kategorier.css">
+    
+<div class="grid-container">
+  <div class="produkter0">
+    <h2>Vores elskede bagværk</h2> <br>
+    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec nunc lorem. Nulla vel neque non lectus dictum condimentum. Pellentesque blandit elit ut odio congue dapibus. Integer eget ipsum ullamcorper risus gravida dictum nec et magna. In magna nisl, pharetra eu volutpat quis, bibendum non ex.</h5>
+  </div>
+  <div class="produkter1">
+    <nav id=nav-produkter>
+        <ul class="kategori-style"> 
+          <% kategorier.categories.forEach(function(item) {
+            %>
+           <li><a href="/kategori/<%= item.id %>" ><%= item.title %></a></li>
+           <% }); %>
+       </ul>
+     </nav>
+  </div>
+  <div class="produkter2">
+    <% include ../partials/produkter %>  
+  </div>
+
+</div>
+</div>
+
+<% include ../partials/footer %>
